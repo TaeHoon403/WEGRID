@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kh.wegrid.board.mapper.BoardMapper">
+
+    <insert id="insertBoardAttachment">
+        INSERT ALL
+        <foreach collection="attachmentVoList" item="x">
+            <if test="x.originName != null">
+                INTO BOARD_ATTACHMENT (NO, BOARD_NO, ORIGIN_NAME, CHANGE_NAME)
+                VALUES (
+                (SELECT GET_BOARD_ATTACHMENT_NO FROM DUAL),
+                SEQ_BOARD.CURRVAL,
+                #{x.originName},
+                #{x.changeName}
+                )
+            </if>
+        </foreach>
+        SELECT 1 FROM DUAL
+    </insert>
+
+
+    <select id="getBoardVoList">
+        SELECT
+        B.NO
+        , B.TITLE
+        , B.CONTENT
+        , B.WRITER_NO
+        , B.VIEW_CNT
+        , B.ENROLL_DATE
+        , B.DEL_YN
+        , E.NAME AS NAME
+        FROM BOARD B
+        JOIN EMPLOYEE E ON( B.WRITER_NO = E.NO )
+        WHERE B.DEL_YN = 'N'
+        <if test="searchType == 'title'">
+            AND TITLE LIKE '%${searchTitleValue}%'
+        </if>
+        <if test="searchType == 'content'">
+            AND CONTENT LIKE '%${searchContentValue}%'
+        </if>
+        ORDER BY B.NO DESC
+        OFFSET #{pvo.offset} ROWS FETCH NEXT #{pvo.boardLimit} ROWS ONLY
+    </select>
+
+    <select id="getBoardCnt">
+        SELECT COUNT(NO)
+        FROM BOARD
+        WHERE DEL_YN ='N'
+        <if test="searchType == 'title'">
+            AND TITLE LIKE '%${searchTitleValue}%'
+        </if>
+        <if test="searchType == 'content'">
+            AND CONTENT LIKE '%${searchContentValue}%'
+        </if>
+    </select>
+
+
+    <insert id="updateBoardAttachment">
+        INSERT ALL
+        <foreach collection="changeNameList" item = "x">
+            INTO BOARD_ATTACHMENT (NO,BOARD_NO,CHANGE_NAME) VALUES((SELECT GET_BOARD_ATTACHMENT_NO FROM DUAL), #{no}, #{x})
+        </foreach>
+        SELECT 1 FROM DUAL
+    </insert>
+
+</mapper>

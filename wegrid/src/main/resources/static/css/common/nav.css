@@ -1,0 +1,60 @@
+/* Nav 영역 */
+nav {
+    grid-area: nav;
+    background-color: #174880; /* 검은색 */
+    color: white;
+    /* padding: 30px;
+    gap: 30px; */
+    display: grid;
+    grid-template-rows: repeat(9 , 75px) 40px 1fr;
+    /* flex-direction: column; */
+}
+
+ nav > div {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+} 
+ nav > div:hover{
+    background-color: #123f72;
+}
+
+.icon-boc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.name-boc{
+    display: flex;
+    align-items: center;
+}
+ 
+
+.navLabel{
+    display: contents;
+}
+.navLabel:hover{
+    background-color: #123f72;
+}
+#submitListt{
+    display: none;
+    padding-left: 25%;
+    padding-top: 4%;
+    
+}
+#submitListt:hover{
+    background-color: #123f72;
+}
+#submitListt.visible {
+    display: block;
+}
+#receiveListt{
+    display: none;
+    padding-left: 25%;
+    padding-top: 4%;
+}
+#receiveListt:hover{
+    background-color: #123f72;
+}
+#receiveListt.visible {
+    display: block;
+}

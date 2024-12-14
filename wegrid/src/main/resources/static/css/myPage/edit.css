@@ -1,0 +1,178 @@
+/* ----------------------
+----------layout---------
+------------------------- */
+
+.content-area {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 100px 0fr 100px 420px 120px;
+    
+}
+
+.title-area {
+    padding-left: 50px;
+    justify-self: start;
+    align-self: center;
+    color: #174880;
+}
+
+.title-text {
+    margin-bottom: 0;
+}
+
+.line_1 {
+    display: grid;
+    height: 2px;
+    background-color: #C0C0C0;
+    color: #C0C0C0;
+    width: 1400px;
+    place-self: center center;
+}
+
+.input-area {
+    display: grid;
+    grid-template-rows: 70px 0fr 70px 0fr 70px 0fr 70px 0fr 140px;
+}
+
+.line_2 {
+    display: grid;
+
+    height: 1px;
+    background-color: #C0C0C0;
+    color: #C0C0C0;
+    width: 1000px;
+    place-self: center center;
+    margin-left: 50px;
+}
+
+.info-input {
+    display: grid;
+    grid-template-columns: 400px 980px;
+    column-gap: 60px;
+}
+
+.info-input div {
+    align-self: center;
+    justify-self: end;
+    font-weight: bold;
+}
+
+.info-input input {
+    width: 700px;
+    height: 30px;
+    align-self: center;
+    justify-self: start;
+
+    background-color: #F4F4F4;
+    border: 1px solid #CFCFCF;
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.2); /* 안쪽 그림자 */
+}
+
+input {
+    padding-left: 12px;
+}
+
+/* ----------------------
+----------address--------
+------------------------- */
+
+.client-address {
+    display: grid;
+    grid-template-columns: 400px 400px 580px;
+    grid-template-rows: 1.2fr 1fr 1fr;
+    column-gap: 60px;
+}
+
+.address-btn {
+    display: grid;
+}
+
+.address-btn > .btn.btn-primary {
+    display: grid !important;
+    width: 100px !important;
+    height: 30px !important;
+    align-content: center !important;
+    align-self: center !important;
+}
+
+.text-address {
+    display: grid;
+    align-self: center;
+    justify-self: end;
+    font-weight: bold;
+}
+
+.address-input_1 {
+    align-self: center;
+    justify-self: start;
+}
+.address-input_2 {
+    align-self: center;
+    justify-self: start;
+    grid-column: span 2;
+}
+.address-input_3 {
+    grid-column: span 2;
+    justify-self: start;
+    align-self: start;
+}
+
+
+.address-input_1 > input {
+    width: 400px;
+    height: 30px;
+    background-color: #F4F4F4;
+    border: 1px solid #CFCFCF;
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 30px 0px rgba(0, 0, 0, 0.3); /* 안쪽 그림자 */
+}
+
+.address-input_2 > input {
+    width: 700px;
+    height: 30px;
+    background-color: #F4F4F4;
+    border: 1px solid #CFCFCF;
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 30px 0px rgba(0, 0, 0, 0.3); /* 안쪽 그림자 */
+}
+
+.address-input_3 > input {
+    width: 700px;
+    height: 30px;
+    background-color: #F4F4F4;
+    border: 1px solid #CFCFCF;
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.2); /* 안쪽 그림자 */
+}
+
+.btn-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+}
+
+.btn-area .enroll-btn {
+    display: grid;
+    justify-self: end;
+    align-self: center;
+}
+
+.btn-area .cancel-btn {
+    display: grid;
+    justify-self: start;
+    align-self: center;
+}
+
+.btn-area .enroll-btn button {
+    width: 150px !important;
+    height: 35px !important;
+}
+
+.btn-area .cancel-btn button {
+    width: 150px !important;
+    height: 35px !important;
+    background-color: gray !important;
+    border: none !important;
+}

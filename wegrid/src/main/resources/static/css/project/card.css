@@ -1,0 +1,177 @@
+/* Main 영역 */
+main {
+    grid-area: main;
+    background-color: #d1dce8; 
+    padding: 0px;
+}
+
+#main-content {
+    border-radius: 5px;
+    width: 1500px;
+    height: 740px;
+    margin-top: 0px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////// */
+
+.card-container a{
+    text-decoration: none;
+    color : black;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center; 
+    padding-right: 20px; 
+    gap: 8px;
+}
+
+.filter-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-controls select,
+.filter-controls input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    padding: 2px;
+}
+
+.search-box input[type="text"] {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 12px;
+    flex-grow: 1;
+}
+
+.search-box i {
+    font-size: 16px;
+    color: #666;
+    margin-right: 5px;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding-top: 60px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+
+#card{
+    cursor: pointer;
+    width: 300px; 
+    margin: 20px;
+    background-color: #fff; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 13px solid #0053a6;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+
+#card-content{
+    text-align: right;
+    /* line-height: 2; */
+    padding-right: 20px;
+    margin-top: 20px;
+}
+
+.card-content > h3{
+    font-size: 18px;
+}
+
+.card-content > p{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.status-ready {
+    background-color: #4E83EB; 
+    color: white;
+    font-size: 12px;
+    padding: 4px 15px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+.status-ongoing {
+    background-color: #EB4E4E; 
+    color: white;
+    font-size: 12px;
+    padding: 4px 15px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+.status-completed {
+    background-color: #12C557; 
+    color: white;
+    font-size: 12px;
+    padding: 4px 15px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.status-canceled {
+    background-color: #a625e2; 
+    color: white;
+    font-size: 12px;
+    padding: 4px 15px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.project-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.team-count {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.page-area{
+    display: flex;
+        text-align: center;
+        color: #174880;
+        margin: 17px 10px;
+        font-size: 16px;
+        font-weight: bold;
+        gap: 15px;
+        justify-content: center;
+}
+
+.page-area a{
+    text-decoration: none;
+}

@@ -1,0 +1,273 @@
+/* ----------------------
+----------layout---------
+------------------------- */
+
+.content-area {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr 0fr 1fr;
+    grid-template-rows: 80px 0fr 1fr 80px;
+    
+}
+
+.title-area {
+    grid-column: span 3;
+    
+    padding-left: 50px;
+    justify-self: start;
+    align-self: center;
+    color: #174880;
+}
+
+.title-text {
+    margin-bottom: 0;
+}
+
+.line_1 {
+
+    display: grid;
+    grid-column: span 3;
+    height: 2px;
+    background-color: #C0C0C0;
+    color: #C0C0C0;
+    width: 1400px;
+    place-self: center center;
+}
+
+.line_2 {
+
+    display: grid;
+    width: 2px;
+    height: 350px;
+    margin-top: 50px;
+
+    background-color: #C0C0C0;
+    color: #C0C0C0;
+    place-self: center center;
+}
+
+.cinfo-area {
+    display: grid;
+    grid-template-rows: 2fr 1fr 0fr 2fr 0fr 2fr;
+
+    justify-items: center;
+}
+
+.cminfo-area {
+    display: grid;
+    grid-template-rows: 2fr 1fr 0fr 1fr 0fr 1fr 2fr;
+
+    align-items: center;
+    justify-items: center;
+}
+
+.btn-area {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-column: span 3;
+}
+
+
+
+
+/* ----------------------
+----- client info -------
+------------------------- */
+
+.c-info {
+    justify-self: center;
+    align-self: center;
+    color: #174880;
+}
+
+.cm-info {
+    display: grid;
+    /* grid-column: span 2; */
+    justify-self: center;
+    align-self: center;
+    color: #174880;
+}
+
+.client-name {
+    justify-self: center;
+    align-self: center;
+    font-weight: bold;
+}
+
+.client-name input {
+    width: 300px;
+}
+
+.client-address {
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr 3fr;
+    grid-template-rows: 1.2fr 1fr 1fr;
+}
+
+.client-address > .btn.btn-primary {
+    display: grid;
+    width: 100px;
+    height: 30px;
+    align-content: center;
+    align-self: center;
+}
+
+.text-address {
+    display: grid;
+    align-self: center;
+    font-weight: bold;
+}
+
+.address-input_1 {
+    align-self: center;
+    justify-self: center;
+    grid-column: span 2;
+}
+.address-input_2 {
+    align-self: center;
+    justify-self: center;
+    grid-column: span 4;
+}
+.address-input_3 {
+    grid-column: span 4;
+    justify-self: center;
+    align-self: start;
+}
+
+
+.address-input_1 > input {
+    width: 200px;
+    height: 30px;
+}
+
+.address-input_2 > input {
+    width: 400px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.address-input_3 > input {
+    width: 400px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+
+.cinfo_line {
+    height: 1px;
+    background-color: #C0C0C0;
+    color: #C0C0C0;
+    width: 600px;
+    place-self: center center;
+}
+
+.client-grade {
+    justify-self: end;
+    font-weight: bold;
+
+    padding-top: 30px;
+    padding-right: 95px;
+}
+
+.client-status {
+    justify-self: end;
+    font-weight: bold;
+
+    padding-top: 30px;
+    padding-left: 150px;
+}
+
+.select-grade {
+    border: 1px solid #C0C0C0;
+    border-radius: 5px;
+
+    width: 70px;
+    height: 30px;
+}
+
+.select-status {
+    border: 1px solid #C0C0C0;
+    border-radius: 5px;
+
+    width: 70px;
+    height: 30px;
+}
+
+.cminfo_line {
+    /* grid-column: span 2; */
+    height: 1px;
+    background-color: #C0C0C0;
+    color: #C0C0C0;
+    width: 600px;
+    place-self: center center;
+}
+
+.cminfo-input {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+}
+
+.cminfo-input > .text {
+    font-weight: bold;
+    justify-self: end;
+    padding-right: 20px;
+}
+
+input {
+    height: 30px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1); /* 요소 내부로 그림자 */
+}
+
+.cminfo-input > div > input {
+    width: 300px;
+}
+
+.selectList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+/* ----------------------
+------------btn----------
+------------------------- */
+
+.enroll-btn {
+    justify-self: right; /* 전체 버튼을 중앙 정렬 */
+    align-self: center;
+
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.cancel-btn {
+    justify-self: left; /* 전체 버튼을 중앙 정렬 */
+    align-self: center;
+
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.cancel-btn > .btn.btn-primary {
+    background-color: #8C8A8A;
+    border-color: #8C8A8A;
+}
+
+.enroll-btn .btn.btn-primary {
+    width: 100px;
+}
+
+.cancel-btn .btn.btn-primary {
+    width: 100px;
+}
+
+.address-btn {
+    align-self: center;
+    justify-self: end;
+    margin-right: 20px;
+}
